@@ -4,7 +4,6 @@ package com.pet.petClinic.services;
  */
 import com.pet.petClinic.model.Vet;
 
-
 public interface VetService extends CrudService<Vet, Long>{
 
 
