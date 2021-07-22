@@ -5,6 +5,26 @@
         <title>List of Vets</title>
     </head>
     <body>
+        //The comment below  works only for intellij, to help it know that it's of type variable vet.
+        <!--/*@thymesVar id="owner" type=""com.pet.petClinic.model.Vet/-->
         <h1 th:text="'List of Vets'"I>List of Vets</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="vet : ${vets}">
+                <td th:text="${vet.id}">1</td>
+                <td th:text="${vet.firstName}">John</td>
+                <td th:text="${vet.lastName}">Doe</td>
+            </tr>
+            </tbody>
+        </table>
     </body>
 </html>
